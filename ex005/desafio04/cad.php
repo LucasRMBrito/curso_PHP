@@ -30,7 +30,7 @@
             
 
             echo "<p>Seus ". numfmt_format_currency($padrao, $num, "BRL") . " equivalem a " . numfmt_format_currency($padrao, $dolar, "USD");
-            print "<p><strong>Cotacao fixa de " . numfmt_format_currency($padrao, $cota, "BRL") . "</strong> informada diretamente no codigo.</p>";
+            print "<p><strong>Cotacao " . numfmt_format_currency($padrao, $cota, "BRL") . "</strong> informada diretamente pelo Banco Central.</p>";
         ?>
         <button onclick="javascript:window.location.href='index.html'">&#x2B05; Voltar</button>
     </main>
