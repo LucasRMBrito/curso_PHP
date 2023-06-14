@@ -34,8 +34,17 @@
             print "<br> O valor do divisor é : <strong>$divisor</strong>";
             print "<br> O quociente é: <strong> $quociente </strong>";
             echo "<br> O resto da divisão de é:<strong> $resto</strong>";
-            
         ?>
+        <table class="divisao">
+            <tr>
+                <td><?=$dividendo?></td>
+                <td><?=$divisor?></td>
+            </tr>
+            <tr>
+                <td><?=$resto?></td>
+                <td><?=$quociente?></td>
+            </tr>
+        </table>
     </section>
 </body>
 </html>

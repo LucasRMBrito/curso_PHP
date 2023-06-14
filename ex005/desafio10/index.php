@@ -19,9 +19,9 @@
         <h2>Médias Aritméticas</h2>
         <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
             <label for="anonascimento">Em que ano você nasceu?</label>
-            <input type="number" name="anonascimento" id="anonascimento">
+            <input type="number" name="anonascimento" id="anonascimento" min="1900" max="<?=$anoescolha?>">
             <label for="anoescolha">Quer saber sua idade em que ano? (atualmente estamos em <?php echo "<strong>".date('Y')."</strong>"?>)</label>
-            <input type="number" name="anoescolha" id="anoescolha" >
+            <input type="number" name="anoescolha" id="anoescolha" min="1900" value="<?=$anoescolha?>">
             <input type="submit" value="Qual será minha idade?">
         </form>
     </main>

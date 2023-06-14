@@ -11,8 +11,10 @@
 <body>
     <?php 
         $numero = $_GET['numero'];
-        $raizquadrada = sqrt($numero);
-        $raizcubica=pow($numero,1.0/3.0);
+        // $raizquadrada = sqrt($numero);
+        // $raizcubica=pow($numero,1.0/3.0);
+        $raizquadrada = $numero ** (1/2);
+        $raizcubica = $numero ** (1/3);
     ?>  
 
     <main>

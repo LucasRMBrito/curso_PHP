@@ -10,8 +10,8 @@
 </head>
 <body>
     <?php 
-        $preco = $_GET["preco"];
-        $percentual = $_GET["percentual"];
+        $preco = $_GET["preco"] ?: 0;
+        $percentual = $_GET["percentual"] ?: 0;
         $preconovo = (($preco / 100) * $percentual) + $preco;
         
     ?>  
@@ -20,9 +20,9 @@
         <h2>Médias Aritméticas</h2>
         <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
             <label for="preco">Preço do Produto (R$)</label>
-            <input type="number" name="preco" id="preco">
-            <label for="percentual">Qual será o percentual de reajuste? <?php echo "(<strong>$percentual%</strong>)";?> </label>
-            <input type="number" name="percentual" id="percentual" >
+            <input type="number" name="preco" id="preco" value="<?=$preco?>">
+            <label for="percentual">Qual será o percentual de reajuste? (<strong><span id="p">?</span>%</strong>)</label>
+            <input type="range" name="percentual" id="percentual" value="<?=$percentual?>" min="0" max="100" oninput="mudaValor()">
             <input type="submit" value="Qual será minha idade?">
         </form>
     </main>
@@ -33,5 +33,11 @@
             echo "O produto que custava R$" . number_format($preco, 2, ",",".") . " com <strong>$percentual% de aumento</strong> vai passar a custar <strong>R$" . number_format($preconovo, 2, ",", ".") . "</strong> a partir de agora.";
         ?>
     </section>
+    <script>
+        mudaValor()
+        function mudaValor() {
+            p.innerText = percentual.value;
+        }
+    </script>
 </body>
 </html>
