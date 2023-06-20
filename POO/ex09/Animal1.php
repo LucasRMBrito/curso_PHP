@@ -1,10 +1,9 @@
 <?php 
-    abstract class Animal {
+    abstract class Animal1 {
         protected $peso;
         protected $idade;
         protected $membros;
-        // abstract function locomover();
-        // abstract function alimentar();
+
         abstract function emitirSom();
 
         function setPeso($peso){

@@ -18,10 +18,13 @@
             $l = new Lobo();
             $c = new Cachorro();
 
-            $m->emitirSom();
-            $l->emitirSom();
+
             $c->emitirSom();
-            $c->reagir("olá");
+            $c->reagirFrase("toma comida");
+            $c->reagirDono(false);
+            $c->reagirHora(12,0);
+            
+
         ?>
     </pre>
 </body>
